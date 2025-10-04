@@ -1,4 +1,5 @@
-# 🚀 **High-Performance Exoplanet Classification System**
+<<<<<<< HEAD
+# 🚀 **ExoplanetsNew - High-Performance Exoplanet Classification System**
 
 A **scientifically rigorous, publication-ready** machine learning platform for exoplanet candidate classification using multi-mission NASA data (Kepler, K2, TESS). Enhanced with **advanced algorithms** and **98%+ target performance**, this system provides **state-of-the-art performance** with comprehensive scientific validation and interpretability.
 
@@ -976,3 +977,6 @@ This project is open source and available under the MIT License.
 ---
 
 **Built with ❤️ for exoplanet research and discovery**
+=======
+# ExoplanetsNew
+>>>>>>> 09d6932561a9f40a4ffdde1d34e457d8d077de42
