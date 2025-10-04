@@ -1,0 +1,175 @@
+{
+  "features": [
+    {
+      "name": "period_d",
+      "units": "days",
+      "min_range": 0.5,
+      "max_range": 1000.0,
+      "description": "Orbital period of the planet candidate in days",
+      "category": "orbital",
+      "importance_rank": 2
+    },
+    {
+      "name": "duration_hr",
+      "units": "hours",
+      "min_range": 0.5,
+      "max_range": 24.0,
+      "description": "Duration of the transit event in hours",
+      "category": "transit",
+      "importance_rank": 5
+    },
+    {
+      "name": "depth_ppm",
+      "units": "ppm",
+      "min_range": 1.0,
+      "max_range": 50000.0,
+      "description": "Transit depth in parts per million",
+      "category": "transit",
+      "importance_rank": 3
+    },
+    {
+      "name": "snr",
+      "units": "unitless",
+      "min_range": 1.0,
+      "max_range": 1000.0,
+      "description": "Signal-to-noise ratio of the transit detection",
+      "category": "quality",
+      "importance_rank": 4
+    },
+    {
+      "name": "radius_re",
+      "units": "Earth radii",
+      "min_range": 0.1,
+      "max_range": 30.0,
+      "description": "Planet radius in units of Earth radius",
+      "category": "physical",
+      "importance_rank": 1
+    },
+    {
+      "name": "a_over_r",
+      "units": "unitless",
+      "min_range": 1.0,
+      "max_range": 100.0,
+      "description": "Semi-major axis to stellar radius ratio",
+      "category": "orbital",
+      "importance_rank": 6
+    },
+    {
+      "name": "teff_k",
+      "units": "Kelvin",
+      "min_range": 2500.0,
+      "max_range": 10000.0,
+      "description": "Effective temperature of the host star",
+      "category": "stellar",
+      "importance_rank": 7
+    },
+    {
+      "name": "logg",
+      "units": "dex",
+      "min_range": 2.0,
+      "max_range": 5.5,
+      "description": "Base-10 logarithm of surface gravity of the host star",
+      "category": "stellar",
+      "importance_rank": 8
+    },
+    {
+      "name": "rstar_rsun",
+      "units": "Solar radii",
+      "min_range": 0.1,
+      "max_range": 10.0,
+      "description": "Radius of the host star in solar radii",
+      "category": "stellar",
+      "importance_rank": 9
+    },
+    {
+      "name": "mag",
+      "units": "magnitude",
+      "min_range": 5.0,
+      "max_range": 20.0,
+      "description": "Apparent magnitude of the host star",
+      "category": "stellar",
+      "importance_rank": 10
+    },
+    {
+      "name": "crowding",
+      "units": "fraction",
+      "min_range": 0.0,
+      "max_range": 1.0,
+      "description": "Fraction of light contaminated by nearby stars",
+      "category": "quality",
+      "importance_rank": 11
+    },
+    {
+      "name": "contamination",
+      "units": "fraction",
+      "min_range": 0.0,
+      "max_range": 1.0,
+      "description": "Contamination factor from nearby sources",
+      "category": "quality",
+      "importance_rank": 12
+    },
+    {
+      "name": "odd_even_ratio",
+      "units": "unitless",
+      "min_range": 0.1,
+      "max_range": 10.0,
+      "description": "Ratio of odd to even transit depths",
+      "category": "transit",
+      "importance_rank": 13
+    },
+    {
+      "name": "secondary_depth_ppm",
+      "units": "ppm",
+      "min_range": 0.0,
+      "max_range": 1000.0,
+      "description": "Depth of secondary eclipse in parts per million",
+      "category": "transit",
+      "importance_rank": 14
+    },
+    {
+      "name": "mission",
+      "units": "name",
+      "min_range": null,
+      "max_range": null,
+      "description": "Space mission that collected the data",
+      "category": "metadata",
+      "importance_rank": 15,
+      "allowed_values": ["Kepler", "K2", "TESS", "CoRoT", "HATNet", "WASP", "XO"]
+    }
+  ],
+  "last_updated": "2025-10-04T12:00:00Z",
+  "version": "1.2.0",
+  "total_features": 15,
+  "required_features": [],
+  "optional_features": [
+    "period_d", "duration_hr", "depth_ppm", "snr", "radius_re",
+    "a_over_r", "teff_k", "logg", "rstar_rsun", "mag",
+    "crowding", "contamination", "odd_even_ratio", "secondary_depth_ppm", "mission"
+  ],
+  "feature_categories": {
+    "orbital": ["period_d", "a_over_r"],
+    "transit": ["duration_hr", "depth_ppm", "odd_even_ratio", "secondary_depth_ppm"],
+    "physical": ["radius_re"],
+    "stellar": ["teff_k", "logg", "rstar_rsun", "mag"],
+    "quality": ["snr", "crowding", "contamination"],
+    "metadata": ["mission"]
+  },
+  "validation_rules": {
+    "all_features_optional": true,
+    "allow_missing_features": true,
+    "numeric_features_only": [
+      "period_d", "duration_hr", "depth_ppm", "snr", "radius_re",
+      "a_over_r", "teff_k", "logg", "rstar_rsun", "mag",
+      "crowding", "contamination", "odd_even_ratio", "secondary_depth_ppm"
+    ],
+    "categorical_features": ["mission"],
+    "range_validation": true,
+    "outlier_detection": false
+  },
+  "preprocessing_info": {
+    "scaling_method": "StandardScaler",
+    "missing_value_strategy": "median_imputation",
+    "categorical_encoding": "LabelEncoder",
+    "feature_selection": "mutual_information"
+  }
+}
