@@ -73,7 +73,7 @@ Key modules:
 The platform integrates with multiple astronomical data sources:
 
 - NASA Exoplanet Archive
-- ESA Gaia Catalog
+- KOI Dataset
 - TESS Mission data
 - K2 Mission observations
 
