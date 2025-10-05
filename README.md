@@ -744,7 +744,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - NASA Exoplanet Archive for dataset access
 - ESA Gaia mission for stellar data
 - TESS and K2 missions for exoplanet discoveries
-- Open source community for tools and libraries
+
 
 ## Support
 
