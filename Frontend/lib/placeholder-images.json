@@ -1,0 +1,10 @@
+{
+  "placeholderImages": [
+    {
+      "id": "ai-planet-placeholder",
+      "description": "Placeholder for AI generated planet image",
+      "imageUrl": "https://images.unsplash.com/photo-1621684842323-c18e7f046af8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwbGFuZXQlMjBzcGFjZXxlbnwwfHx8fDE3NTk1NTE2Njd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "planet space"
+    }
+  ]
+}
